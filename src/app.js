@@ -34,6 +34,9 @@ app.use(
   )
 );
 app.use(routes);
+app.get("/", (req, res) => {
+  res.json("Welcome in BLITS");
+});
 app.use(express.static("statics"));
 app.use((req, res) => {
   const response = requestResponse.not_found;
